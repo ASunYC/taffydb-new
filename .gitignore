@@ -1,0 +1,6 @@
+.idea
+.git
+*.swp
+dist
+npm-debug.log
+node_modules
