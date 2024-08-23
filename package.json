@@ -1,6 +1,6 @@
 {
   "name": "@asun01/taffydb-new",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "taffydb-new is clone library from TaffyDB.",
   "keywords": [
     "database",
@@ -14,7 +14,7 @@
   "main": "taffy.js",
   "scripts": {
     "test": "node_modules/.bin/nodeunit test/t.js",
-    "build": "npm run clean && mkdir dist && npm run build:min && shx cp taffy.js taffy.min.js taffy-es.js package.json LICENSE README.md dist/",
+    "build": "npm run clean && mkdir dist && npm run build:min && shx cp taffy.js taffy.min.js taffy-es.js package.json LICENSE README.md dist/ && node ./scripts/publish.js",
     "clean": "shx rm -rf dist",
     "build:min": "uglifyjs taffy.js -o taffy.min.js",
     "pub": "cd dist && npm publish"
@@ -33,8 +33,7 @@
   "license": "BSD-2-Clause",
   "homepage": "http://www.taffydb.com",
   "dependencies": {
-    "@asun01/taffydb-new": "file:",
-    "taffydb-new": "file:"
+    "@asun01/taffydb-new": "file:"
   },
   "devDependencies": {
     "jslint": "^0.12.1",
